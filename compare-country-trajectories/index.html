@@ -165,60 +165,15 @@ window.onload = wrap_img;
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<details class="description">
-      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
-        <p><div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
-<span class="n">baseline_countries</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Italy&#39;</span><span class="p">,</span> <span class="s1">&#39;South Korea&#39;</span><span class="p">,</span> <span class="s1">&#39;Japan&#39;</span><span class="p">]</span>
-<span class="n">max_date</span> <span class="o">=</span> <span class="n">dff2</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-<span class="n">color_domain</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">dff2</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
-<span class="n">color_range</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">get_country_colors</span><span class="p">,</span> <span class="n">color_domain</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">make_since_chart</span><span class="p">(</span><span class="n">highlight_countries</span><span class="o">=</span><span class="p">[],</span> <span class="n">baseline_countries</span><span class="o">=</span><span class="n">baseline_countries</span><span class="p">):</span>
-    <span class="n">selection</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection_multi</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country&#39;</span><span class="p">],</span> <span class="n">bind</span><span class="o">=</span><span class="s1">&#39;legend&#39;</span><span class="p">,</span> 
-                                    <span class="n">init</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;Country&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">}</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">highlight_countries</span> <span class="o">+</span> <span class="n">baseline_countries</span><span class="p">])</span>
-
-    <span class="n">base</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">dff2</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">550</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
-        <span class="n">x</span><span class="o">=</span><span class="s1">&#39;Days since 100 cases:Q&#39;</span><span class="p">,</span>
-        <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">&#39;Confirmed Cases:Q&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">&#39;log&#39;</span><span class="p">)),</span>
-        <span class="n">color</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Color</span><span class="p">(</span><span class="s1">&#39;Country:N&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Scale</span><span class="p">(</span><span class="n">domain</span><span class="o">=</span><span class="n">color_domain</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="n">color_range</span><span class="p">)),</span>
-        <span class="n">tooltip</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">dff2</span><span class="p">),</span>
-        <span class="n">opacity</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">selection</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mf">0.05</span><span class="p">))</span>
-    <span class="p">)</span>
-    <span class="n">max_day</span> <span class="o">=</span> <span class="n">dff2</span><span class="p">[</span><span class="s1">&#39;Days since 100 cases&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-    <span class="n">ref</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">x</span><span class="p">,</span> <span class="mi">100</span><span class="o">*</span><span class="mf">1.3</span><span class="o">**</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_day</span><span class="o">+</span><span class="mi">1</span><span class="p">)],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Days since 100 cases&#39;</span><span class="p">,</span> <span class="s1">&#39;Confirmed Cases&#39;</span><span class="p">])</span>
-    <span class="n">base_ref</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">ref</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Days since 100 cases:Q&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Confirmed Cases:Q&#39;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="p">(</span>
-        <span class="n">base_ref</span><span class="o">.</span><span class="n">mark_line</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=.</span><span class="mi">5</span><span class="p">,</span> <span class="n">strokeDash</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span> <span class="o">+</span>
-        <span class="n">base_ref</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span>
-            <span class="n">alt</span><span class="o">.</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Days since 100 cases&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">max_day</span>
-        <span class="p">)</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span><span class="n">dy</span><span class="o">=-</span><span class="mi">6</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">fontSize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;33% Daily Growth&#39;</span><span class="p">)</span> <span class="o">+</span>
-        <span class="n">base</span><span class="o">.</span><span class="n">mark_line</span><span class="p">(</span><span class="n">point</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span> <span class="o">+</span> 
-        <span class="n">base</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span>
-            <span class="n">alt</span><span class="o">.</span><span class="n">datum</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_date</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
-        <span class="p">)</span><span class="o">.</span><span class="n">mark_text</span><span class="p">(</span><span class="n">dy</span><span class="o">=-</span><span class="mi">8</span><span class="p">,</span> <span class="n">align</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">fontWeight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s1">&#39;Country:N&#39;</span><span class="p">)</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
-        <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Compare </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">highlight_countries</span><span class="p">)</span><span class="si">}</span><span class="s2"> trajectory with </span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">baseline_countries</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-    <span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-</p>
-    </details>
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Learning-from-Italy,-South-Korea-&amp;-Japan">Learning from Italy, South Korea &amp; Japan<a class="anchor-link" href="#Learning-from-Italy,-South-Korea-&amp;-Japan"> </a></h2><p>Italy, South Korea &amp; Japan are three countries which show different growth rates and how it evolved over time.</p>
+<h2 id="Learning-from-Italy,-South-Korea-&amp;-Japan">Learning from Italy, South Korea &amp; Japan<a class="anchor-link" href="#Learning-from-Italy,-South-Korea-&amp;-Japan"> </a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Italy, South Korea &amp; Japan are three countries which show different growth rates and how it evolved over time.</p>
 <p><strong>South Korea</strong> flattened it's growth after 2 weeks since 100 cases. <strong>Italy</strong> alarmingly grows after 3rd week.</p>
 <p>Where does your Country stand today?</p>
 <p>Click (Shift+ for multiple) on Countries legend to filter the visualization.</p>
