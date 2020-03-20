@@ -1,0 +1,2839 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>COVID-19 Overview | COVID-19 Dashboards</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="COVID-19 Overview" />
+<meta name="author" content="Pratap Vardhan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tracking coronavirus total cases, deaths and new cases" />
+<meta property="og:description" content="Tracking coronavirus total cases, deaths and new cases" />
+<link rel="canonical" href="https://covid19dashboards.com/covid-overview/" />
+<meta property="og:url" content="https://covid19dashboards.com/covid-overview/" />
+<meta property="og:site_name" content="COVID-19 Dashboards" />
+<meta property="og:image" content="https://covid19dashboards.com/images/covid-overview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-19T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://covid19dashboards.com/images/covid-overview.png" />
+<meta property="twitter:title" content="COVID-19 Overview" />
+<meta name="twitter:site" content="@HamelHusain" />
+<meta name="twitter:creator" content="@Pratap Vardhan" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Pratap Vardhan"},"description":"Tracking coronavirus total cases, deaths and new cases","@type":"BlogPosting","headline":"COVID-19 Overview","url":"https://covid19dashboards.com/covid-overview/","datePublished":"2020-03-19T00:00:00-05:00","dateModified":"2020-03-19T00:00:00-05:00","image":"https://covid19dashboards.com/images/covid-overview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://covid19dashboards.com/covid-overview/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://covid19dashboards.com/feed.xml" title="COVID-19 Dashboards" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-57531313-4','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>COVID-19 Overview | COVID-19 Dashboards</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="COVID-19 Overview" />
+<meta name="author" content="Pratap Vardhan" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tracking coronavirus total cases, deaths and new cases" />
+<meta property="og:description" content="Tracking coronavirus total cases, deaths and new cases" />
+<link rel="canonical" href="https://covid19dashboards.com/covid-overview/" />
+<meta property="og:url" content="https://covid19dashboards.com/covid-overview/" />
+<meta property="og:site_name" content="COVID-19 Dashboards" />
+<meta property="og:image" content="https://covid19dashboards.com/images/covid-overview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-19T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://covid19dashboards.com/images/covid-overview.png" />
+<meta property="twitter:title" content="COVID-19 Overview" />
+<meta name="twitter:site" content="@HamelHusain" />
+<meta name="twitter:creator" content="@Pratap Vardhan" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Pratap Vardhan"},"description":"Tracking coronavirus total cases, deaths and new cases","@type":"BlogPosting","headline":"COVID-19 Overview","url":"https://covid19dashboards.com/covid-overview/","datePublished":"2020-03-19T00:00:00-05:00","dateModified":"2020-03-19T00:00:00-05:00","image":"https://covid19dashboards.com/images/covid-overview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://covid19dashboards.com/covid-overview/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://covid19dashboards.com/feed.xml" title="COVID-19 Dashboards" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-57531313-4','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head><body><header class="site-header">
+
+    <div class="wrapper"><a class="site-title" rel="author" href="/">COVID-19 Dashboards</a><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewBox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+              </svg>
+            </span>
+          </label>
+  
+          <div class="trigger">
+            <a class="page-link" href="https://github.com/github/covid19-dashboard"><svg class="octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a><a class="page-link" href="/about/">About</a><a class="page-link" href="/related/">Related</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+        </nav></div>
+  </header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">COVID-19 Overview</h1><p class="page-description">Tracking coronavirus total cases, deaths and new cases</p><p class="post-meta post-meta-title"><!-- <time class="dt-published" datetime="2020-03-19T00:00:00-05:00" itemprop="datePublished">
+        Mar 19, 2020
+      </time> -->by 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Pratap Vardhan</span></span>
+    </p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#overview">overview</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#interactive">interactive</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/github/covid19-dashboard/tree/master/_notebooks/2020-03-19-covid19-overview.ipynb" role="button">
+<img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div><div class="px-2">
+    <a href="https://colab.research.google.com/github/github/covid19-dashboard/blob/master/_notebooks/2020-03-19-covid19-overview.ipynb">
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-03-19-covid19-overview.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#hide-input</span>
+<span class="n">template</span> <span class="o">=</span> <span class="n">Template</span><span class="p">(</span><span class="n">get_template</span><span class="p">(</span><span class="n">paths</span><span class="p">[</span><span class="s1">&#39;overview&#39;</span><span class="p">]))</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+    <span class="n">D</span><span class="o">=</span><span class="n">summary</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">df_table</span><span class="p">,</span>  <span class="c1"># REMOVE .head(20) to see all values</span>
+    <span class="n">newcases</span><span class="o">=</span><span class="n">dft_ct_new_cases</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">dt_cols</span><span class="p">[</span><span class="n">LAST_DATE_I</span><span class="o">-</span><span class="mi">50</span><span class="p">]:</span><span class="n">dt_cols</span><span class="p">[</span><span class="n">LAST_DATE_I</span><span class="p">]],</span>
+    <span class="n">np</span><span class="o">=</span><span class="n">np</span><span class="p">,</span> <span class="n">pd</span><span class="o">=</span><span class="n">pd</span><span class="p">)</span>
+<span class="n">HTML</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;&lt;div&gt;</span><span class="si">{</span><span class="n">html</span><span class="si">}</span><span class="s1">&lt;/div&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+
+
+
+
+
+
+
+
+<div class="overview">
+  <div>
+    <div class="kpi-hed">World</div>
+    <div class="d-flex kpi-box">
+      <div class="kpi">
+    <div class="kname">Confirmed Cases</div>
+    <div class="num">242,708</div>
+    <div class="grow ">(+<b>86,614</b>)</div>
+  </div>
+      <div class="kpi">
+    <div class="kname">Deaths</div>
+    <div class="num">9,867</div>
+    <div class="grow ">(+<b>4,048</b>)</div>
+  </div>
+      <div class="kpi">
+    <div class="kname">Recovered</div>
+    <div class="num">84,854</div>
+    <div class="grow pos">(+<b>12,230</b>)</div>
+  </div>
+    </div>
+  </div>
+  <p class="text-center text-uppercase fs9">Updated on <b>March 19, 2020</b> ( +change since 5 days ago.)</p>
+  <div class="d-flex" style="justify-content:space-between;">
+    <div class="kpi-sm">
+      <div class="kpi-hed">China</div>
+      <div class="d-flex kpi-box">
+        <div class="kpi">
+    <div class="kname">Cases</div>
+    <div class="num">81,156</div>
+    <div class="grow ">(+<b>179</b>)</div>
+  </div>
+        <div class="kpi">
+    <div class="kname">Deaths</div>
+    <div class="num">3,249</div>
+    <div class="grow ">(+<b>56</b>)</div>
+  </div>
+      </div>
+    </div>
+    <div class="kpi-sm">
+      <div class="kpi-hed">Europe</div>
+      <div class="d-flex kpi-box">
+        <div class="kpi">
+    <div class="kname">Cases</div>
+    <div class="num">108,818</div>
+    <div class="grow ">(+<b>62,323</b>)</div>
+  </div>
+        <div class="kpi">
+    <div class="kname">Deaths</div>
+    <div class="num">4,875</div>
+    <div class="grow ">(+<b>3,063</b>)</div>
+  </div>
+      </div>
+    </div>
+    <div class="kpi-sm">
+      <div class="kpi-hed">U.S.</div>
+      <div class="d-flex kpi-box">
+        <div class="kpi">
+    <div class="kname">Cases</div>
+    <div class="num">13,677</div>
+    <div class="grow ">(+<b>10,950</b>)</div>
+  </div>
+        <div class="kpi">
+    <div class="kname">Deaths</div>
+    <div class="num">200</div>
+    <div class="grow ">(+<b>146</b>)</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  <p class="text-center" style="font-size: 14px;max-width: 400px;">
+    In the last <b>5 days</b>, <b class="color-neg">86,614</b> new Coronavirus cases have been reported worldwide.
+    Of which <b class="color-neg">62,323</b> (72%) are from <b>Europe</b>.
+    <b>China</b> has reported <b class="color-neg">179</b> new cases in the last 5 days.
+  </p>
+  <table class="table" style="width:575px;">
+    <thead>
+      <tr>
+        <th class="text-right" style="width:120px;"></th>
+        <th class="text-left" style="width:140px;"><svg width="100" height="20" viewBox="0,0,100,20" style="overflow: visible; display: block;">
+  <g>
+    <rect x="0" y="8" width="25" height="10" fill="rgba(255, 152, 0, 0.1)"></rect>
+    <rect x="25" y="8" width="25" height="10" fill="rgba(255, 152, 0, 0.4)"></rect>
+    <rect x="50" y="8" width="25" height="10" fill="rgba(255, 152, 0, 0.7)"></rect>
+    <rect x="75" y="8" width="25" height="10" fill="rgba(255, 152, 0, 1)"></rect>
+  </g>
+  <g style="font-size:10px;text-anchor:middle;">
+    <g transform="translate(25, 6)"><text>10</text></g>
+    <g transform="translate(50, 6)"><text>100</text></g>
+    <g transform="translate(75, 6)"><text>1000</text></g>
+  </g>
+</svg></th>
+      </tr>
+      <tr>
+        <th class="text-right" style="width:120px;">Country</th>
+        <th class="text-left" style="width:140px;">New Cases</th>
+        <th class="text-left" colspan="2">Total Cases</th>
+        <th colspan="2">Deaths</th>
+        <th class="fs9">Fatality</th>
+        <th class="fs9" colspan="2">Recovered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="font-size:9px;">
+        <td></td>
+        <td style="display:flex;justify-content:space-between;">
+          <div>Jan. 29</div>
+          <div>Mar. 19</div>
+        </td>
+        <td></td>
+        <td colspan="4" class="text-left change" style="font-size: 9px;">(+NEW) since Mar, 14</td>
+        <td></td>
+        <td></td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>China</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>81,156</b></td>
+        <td class="change neg">(+<b>179</b>)</td>
+        <td class="pl1">3,249</td>
+        <td class="change neg">(+<b>56</b>)</td>
+        <td class="pl1">4.0%</td>
+        <td>70,535</td>
+        <td class="change pos">(+<b>4,875</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Italy</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>41,035</b></td>
+        <td class="change neg">(+<b>19,878</b>)</td>
+        <td class="pl1">3,405</td>
+        <td class="change neg">(+<b>1,964</b>)</td>
+        <td class="pl1">8.3%</td>
+        <td>4,440</td>
+        <td class="change pos">(+<b>2,474</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Iran</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>18,407</b></td>
+        <td class="change neg">(+<b>5,678</b>)</td>
+        <td class="pl1">1,284</td>
+        <td class="change neg">(+<b>673</b>)</td>
+        <td class="pl1">7.0%</td>
+        <td>5,710</td>
+        <td class="change pos">(+<b>2,751</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Spain</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>17,963</b></td>
+        <td class="change neg">(+<b>11,572</b>)</td>
+        <td class="pl1">830</td>
+        <td class="change neg">(+<b>635</b>)</td>
+        <td class="pl1">4.6%</td>
+        <td>1,107</td>
+        <td class="change pos">(+<b>590</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Germany</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>15,320</b></td>
+        <td class="change neg">(+<b>10,735</b>)</td>
+        <td class="pl1">44</td>
+        <td class="change neg">(+<b>35</b>)</td>
+        <td class="pl1">0.3%</td>
+        <td>113</td>
+        <td class="change pos">(+<b>67</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>US</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>13,677</b></td>
+        <td class="change neg">(+<b>10,950</b>)</td>
+        <td class="pl1">200</td>
+        <td class="change neg">(+<b>146</b>)</td>
+        <td class="pl1">1.5%</td>
+        <td>0</td>
+        <td class="change pos">(+<b>-12</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>France</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>10,947</b></td>
+        <td class="change neg">(+<b>6,460</b>)</td>
+        <td class="pl1">243</td>
+        <td class="change neg">(+<b>152</b>)</td>
+        <td class="pl1">2.2%</td>
+        <td>12</td>
+        <td class="change pos">(+<b>0</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>South Korea</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>8,565</b></td>
+        <td class="change neg">(+<b>479</b>)</td>
+        <td class="pl1">91</td>
+        <td class="change neg">(+<b>19</b>)</td>
+        <td class="pl1">1.1%</td>
+        <td>1,540</td>
+        <td class="change pos">(+<b>1,030</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Switzerland</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>4,075</b></td>
+        <td class="change neg">(+<b>2,716</b>)</td>
+        <td class="pl1">41</td>
+        <td class="change neg">(+<b>28</b>)</td>
+        <td class="pl1">1.0%</td>
+        <td>15</td>
+        <td class="change pos">(+<b>11</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>United Kingdom</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>2,716</b></td>
+        <td class="change neg">(+<b>1,572</b>)</td>
+        <td class="pl1">138</td>
+        <td class="change neg">(+<b>117</b>)</td>
+        <td class="pl1">5.1%</td>
+        <td>67</td>
+        <td class="change pos">(+<b>48</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Netherlands</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>2,467</b></td>
+        <td class="change neg">(+<b>1,505</b>)</td>
+        <td class="pl1">77</td>
+        <td class="change neg">(+<b>65</b>)</td>
+        <td class="pl1">3.1%</td>
+        <td>2</td>
+        <td class="change pos">(+<b>0</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Austria</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>2,013</b></td>
+        <td class="change neg">(+<b>1,358</b>)</td>
+        <td class="pl1">6</td>
+        <td class="change neg">(+<b>5</b>)</td>
+        <td class="pl1">0.3%</td>
+        <td>9</td>
+        <td class="change pos">(+<b>3</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Belgium</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>1,795</b></td>
+        <td class="change neg">(+<b>1,106</b>)</td>
+        <td class="pl1">21</td>
+        <td class="change neg">(+<b>17</b>)</td>
+        <td class="pl1">1.2%</td>
+        <td>31</td>
+        <td class="change pos">(+<b>30</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Norway</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>1,746</b></td>
+        <td class="change neg">(+<b>656</b>)</td>
+        <td class="pl1">7</td>
+        <td class="change neg">(+<b>4</b>)</td>
+        <td class="pl1">0.4%</td>
+        <td>1</td>
+        <td class="change pos">(+<b>0</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Sweden</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>1,439</b></td>
+        <td class="change neg">(+<b>478</b>)</td>
+        <td class="pl1">11</td>
+        <td class="change neg">(+<b>9</b>)</td>
+        <td class="pl1">0.8%</td>
+        <td>16</td>
+        <td class="change pos">(+<b>15</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Denmark</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>1,225</b></td>
+        <td class="change neg">(+<b>389</b>)</td>
+        <td class="pl1">6</td>
+        <td class="change neg">(+<b>5</b>)</td>
+        <td class="pl1">0.5%</td>
+        <td>1</td>
+        <td class="change pos">(+<b>0</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Japan</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>924</b></td>
+        <td class="change neg">(+<b>151</b>)</td>
+        <td class="pl1">29</td>
+        <td class="change neg">(+<b>7</b>)</td>
+        <td class="pl1">3.1%</td>
+        <td>150</td>
+        <td class="change pos">(+<b>32</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Malaysia</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>900</b></td>
+        <td class="change neg">(+<b>662</b>)</td>
+        <td class="pl1">2</td>
+        <td class="change neg">(+<b>2</b>)</td>
+        <td class="pl1">0.2%</td>
+        <td>75</td>
+        <td class="change pos">(+<b>40</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Canada</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>800</b></td>
+        <td class="change neg">(+<b>602</b>)</td>
+        <td class="pl1">9</td>
+        <td class="change neg">(+<b>8</b>)</td>
+        <td class="pl1">1.1%</td>
+        <td>9</td>
+        <td class="change pos">(+<b>1</b>)</td>
+      </tr>
+    
+      <tr>
+        <td class="mw"><b>Portugal</b></td>
+        <td style="vertical-align: middle;"><div class="d-flex" style="height:15px;">
+    
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.1);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.4);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:#eee;border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+    <div style="width:3px;background:rgba(255, 152, 0, 0.7);border-right:1px solid rgba(255,255,255,0.5);"></div>
+    
+  </div></td>
+        <td class="pl1"><b>785</b></td>
+        <td class="change neg">(+<b>616</b>)</td>
+        <td class="pl1">3</td>
+        <td class="change neg">(+<b>3</b>)</td>
+        <td class="pl1">0.4%</td>
+        <td>3</td>
+        <td class="change pos">(+<b>1</b>)</td>
+      </tr>
+    
+    <tbody>
+  &lt;/table&gt;
+&lt;/div&gt;
+<style>
+.overview {
+  min-width: 500px;
+  font-size: 10px;
+  font-family: "Segoe UI", SegoeUI, Roboto, "Segoe WP", "Helvetica Neue", "Helvetica", "Tahoma", "Arial", sans-serif !important;
+}
+.overview p {
+  margin: 6px auto !important;
+  padding: 0;
+}
+@media screen and (max-width: 660px) {
+  .overview p { max-width: none !important; }
+}
+.overview b {
+  font-weight: bolder;
+}
+.overview .kpi-hed {
+  font-weight: bold;
+  font-size: 20px;
+}
+.overview .kpi-box {
+  justify-content: space-around;
+  background: #ececec;
+  padding: 10px 0 !important;
+  margin: 5px 0 !important;
+  min-width: 180px;
+}
+.overview .kpi .num {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.overview .kpi .grow {
+  line-height: 12px;
+  font-size: 12px;
+}
+.overview .table .change.pos , .overview .kpi .grow.pos {
+  color: #118822;
+}
+.overview .table .change.neg, .overview .kpi .grow, .color-neg {
+  color: #cc1100;
+}
+.overview p .color-neg {
+  background: #ececec;
+  padding: 0 5px;
+}
+.overview .kpi .kname {
+  font-size: 12px;
+}
+.overview .kpi-sm .kpi-hed {
+  font-size: 14px;
+  line-height: 10px;
+  padding-top: 10px !important;
+}
+.overview .kpi-sm .num {
+  font-size: 20px;
+  line-height: 20px;
+}
+.overview .kpi-sm .kname {
+  font-size: 11px;
+  line-height: 10px;
+}
+.overview .table {
+  border-collapse: collapse;
+  margin: auto !important;
+  text-align: right;
+  margin-top: 14px;
+  color: black;
+  font-size: 13px;
+  display: table !important;
+}
+.overview .table .change {
+  color: #999;
+  font-size: 80%;
+  text-align: start;
+  vertical-align: inherit;
+  font-weight: normal;
+  padding-left: 1px !important;
+}
+.overview .table th {
+  font-weight: normal;
+}
+.overview .table tbody tr {
+  border-bottom: 1px solid #eee;
+  background: none;
+}
+.overview .table td, .overview .table th {
+  padding: 1px 1px 1px 10px !important;
+  vertical-align: middle;
+  border: none;
+  background: none;
+}
+.overview .table th {
+  text-align: center;
+  text-transform: uppercase;
+}
+.overview .table thead {
+  border-bottom: 1px solid black;
+}
+.overview .fs9 {
+  font-size: 9px;
+}
+.overview .d-flex {
+  display: flex;
+}
+.overview .text-center { text-align: center !important; }
+.overview .text-left { text-align: left !important; }
+.overview .text-right { text-align: right !important; }
+.overview .text-uppercase { text-transform: uppercase !important; }
+.overview div {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+</style>&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Interactive by <a href="https://twitter.com/PratapVardhan">Pratap Vardhan</a><sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup></p>
+<div class="footnotes">
+<hr />
+<ol><li id="fn-1"><p>Source: <a href="https://systems.jhu.edu/research/public-health/ncov/">"COVID-19 Data Repository by Johns Hopkins CSSE"</a> <a href="https://github.com/CSSEGISandData/COVID-19">GitHub repository</a>. Link to <a href="https://github.com/pratapvardhan/notebooks/blob/master/covid19/covid19-overview.ipynb">notebook</a>, <a href="https://gramener.com/enumter/covid19/">orignal interactive</a><a href="#fnref-1" class="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+</div>
+</div>
+&lt;/div&gt;
+ 
+
+</tbody></tbody></table></div></div></div></div></div></div></div></div>
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="github/covid19-dashboard"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/covid-overview/" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A site that displays up to date COVID-19 stats, powered by fastpages.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/hamelsmu" title="hamelsmu"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/HamelHusain" title="HamelHusain"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
