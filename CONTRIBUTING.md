@@ -13,8 +13,4 @@ You should preview your dashboard locally by following [the Development Guide](h
 - Your dashboard should not duplicate or present substantially the same information to what already exists in other dashboards.
 - Any technical information and notes should go in an appendix.
 - Make the visualization as approachable as possible.  Explain things in plain english.  Font sizes should be easy to read.  
-- Keep the content of the dashboard scoped to one logical subject or theme.  
-- If there are too many charts, we may ask you to provide a mechanism to allow readers to more easily search for the information they need.  Here is [an example](https://covid19dashboards.com/growth-bayes/) of using a dropdown list to allow readers to select the country they are interested in.
 - Put your main visualization at the top of your notebook.  The methodology or "how to" should either be in footnotes or hidden from view.
-
-We cannot guarantee that we will accept every submission to this project, but we are happy to work with you as much as possible.
