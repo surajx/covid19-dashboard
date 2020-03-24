@@ -69,7 +69,7 @@
     
         ,"post6": {
             "title": "Compare Country Trajectories - Total Cases",
-            "content": "Learning from Italy, South Korea &amp; Japan . Italy, South Korea &amp; Japan are three countries which show different growth rates and how it evolved over time. . South Korea flattened it&#39;s growth after 2 weeks since 100 cases. Italy continue to grew after 3rd week. . Where does your Country stand today? . Click (Shift+ for multiple) on Countries legend to filter the visualization. . Last Updated on March, 23 2020 . Select a country from the drop down list below to toggle the visualization. . Interactive by Pratap Vardhan1 . . Source: &quot;2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE&quot; GitHub repository. Link to original notebook.&#8617; . |",
+            "content": "Learning from Italy, South Korea &amp; Japan . Italy, South Korea &amp; Japan are three countries which show different growth rates and how it evolved over time. . South Korea flattened it&#39;s growth after 2 weeks since 100 cases. Italy continue to grew after 3rd week. . Where does your Country stand today? . Click (Shift+ for multiple) on Countries legend to filter the visualization. . Last Updated on March, 23 2020 Select a country from the drop down list below to toggle the visualization. . Interactive by Pratap Vardhan1 . . Source: &quot;2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE&quot; GitHub repository. Link to original notebook.&#8617; . |",
             "url": "https://covid19dashboards.com/compare-country-trajectories/",
             "relUrl": "/compare-country-trajectories/",
             "date": " • Mar 17, 2020"
