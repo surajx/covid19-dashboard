@@ -67,7 +67,7 @@ def load_data(drop_states=False, p_crit=.05, filter_n_days_100=None):
     df_d.columns = ['deaths']
 
     df = (df.set_index(['country', 'state'], append=True)
-            .join(df_r)
+#             .join(df_r)
             .join(df_d)
             .reset_index(['country', 'state'])
     )
